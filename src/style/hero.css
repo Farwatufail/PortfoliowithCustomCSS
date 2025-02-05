@@ -1,0 +1,114 @@
+body{
+    max-width: 1500px;
+    margin: auto;
+}
+
+.header-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-boxes-con{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(149, 122, 122);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 1px 4px 10px rgb(201, 25, 25);
+}
+
+.hero-right-div{
+    width: 50%;
+}
+
+.header-image{
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.title-hero{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 28px
+}
+
+.des-hero{
+    margin-top: 20px;
+}
+
+.hero-btn{
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #f10d0d;
+    z-index: 1;
+    background: #ebbcdf;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(207, 15, 15, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 20px;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+}
+
+@media  screen and (min-width:100px) and (max-width:750px) {
+    .header-boxes-con{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-image{
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-right-div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title-hero{
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 28px
+    }
+
+    .des-hero{
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+}
